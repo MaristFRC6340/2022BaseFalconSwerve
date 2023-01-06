@@ -67,4 +67,14 @@ public class RobotContainer {
     // An ExampleCommand will run in autonomous
     return new exampleAuto(s_Swerve);
   }
+
+  /**
+   * This will be another Autonomous Routine for Training
+   * programmers
+   * 
+   * Added by michaudc
+   */
+  public Command getAutoTrainingCommand() {
+    return new TrainingAuto(s_Swerve);
+  }
 }
