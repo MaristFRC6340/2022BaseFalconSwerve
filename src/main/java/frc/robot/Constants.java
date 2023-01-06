@@ -11,6 +11,8 @@ import frc.lib.util.SwerveModuleConstants;
 public final class Constants {
     public static final double stickDeadband = 0.1;
 
+    public static final double speedControl = 0.5; // 1.0 is full
+
     public static final class Swerve {
         //public static final int pigeonID = 1;
         public static final boolean invertGyro = false; // Always ensure Gyro is CCW+ CW-
@@ -62,8 +64,8 @@ public final class Constants {
         public static final double driveKA = (0.27 / 12);
 
         /* Swerve Profiling Values */
-        public static final double maxSpeed = 2.5; //meters per second
-        public static final double maxAngularVelocity = 4;
+        public static final double maxSpeed = 2.5; // default 2.5meters per second
+        public static final double maxAngularVelocity = 4; // default 4
 
         /* Neutral Modes */
         public static final NeutralMode angleNeutralMode = NeutralMode.Coast;
@@ -124,8 +126,8 @@ public final class Constants {
     }
 
     public static final class AutoConstants {
-        public static final double kMaxSpeedMetersPerSecond = 3;
-        public static final double kMaxAccelerationMetersPerSecondSquared = 3;
+        public static final double kMaxSpeedMetersPerSecond = 1; // Original is 3
+        public static final double kMaxAccelerationMetersPerSecondSquared = 1; // Original is 3
         public static final double kMaxAngularSpeedRadiansPerSecond = Math.PI;
         public static final double kMaxAngularSpeedRadiansPerSecondSquared = Math.PI;
     
