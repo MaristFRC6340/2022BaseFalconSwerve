@@ -51,5 +51,8 @@ public class TeleopSwerve extends CommandBase {
         s_Swerve.drive(translation, rotation, fieldRelative, openLoop);
 
         // TODO: add gyro reset button
+        if(controller.getRawButtonPressed(9)){
+            s_Swerve.zeroGyro();
+        }
     }
 }
