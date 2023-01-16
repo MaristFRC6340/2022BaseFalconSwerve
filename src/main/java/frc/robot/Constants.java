@@ -11,7 +11,7 @@ import frc.lib.util.SwerveModuleConstants;
 public final class Constants {
     public static final double stickDeadband = 0.1;
 
-    public static final double speedControl = 0.5; // 1.0 is full
+    public static final double speedControl = 1; // 1.0 is full
 
     public static final class Swerve {
         //public static final int pigeonID = 1;
@@ -47,21 +47,21 @@ public final class Constants {
         public static final boolean driveEnableCurrentLimit = true;
 
         /* Angle Motor PID Values */
-        public static final double angleKP = 1;
+        public static final double angleKP = 0.2;
         public static final double angleKI = 0.0;
-        public static final double angleKD = 12.0;
+        public static final double angleKD = 0.0;
         public static final double angleKF = 0.0;
 
         /* Drive Motor PID Values */
-        public static final double driveKP = 0.10;
+        public static final double driveKP = 0.47451;
         public static final double driveKI = 0.0;
         public static final double driveKD = 0.0;
         public static final double driveKF = 0.0;
 
         /* Drive Motor Characterization Values */
-        public static final double driveKS = (0.667 / 12); //divide by 12 to convert from volts to percent output for CTRE
-        public static final double driveKV = (2.44 / 12);
-        public static final double driveKA = (0.27 / 12);
+        public static final double driveKS = (0.51988 / 12); //divide by 12 to convert from volts to percent output for CTRE // was .667
+        public static final double driveKV = (0.48333 / 12); // was 2.44
+        public static final double driveKA = (0.026364 / 12); // was .27
 
         /* Swerve Profiling Values */
         public static final double maxSpeed = 2.5; // default 2.5meters per second
@@ -126,7 +126,7 @@ public final class Constants {
     }
 
     public static final class AutoConstants {
-        public static final double kMaxSpeedMetersPerSecond = 1; // Original is 3
+        public static final double kMaxSpeedMetersPerSecond = 2; // Original is 3
         public static final double kMaxAccelerationMetersPerSecondSquared = 1; // Original is 3
         public static final double kMaxAngularSpeedRadiansPerSecond = Math.PI;
         public static final double kMaxAngularSpeedRadiansPerSecondSquared = Math.PI;
