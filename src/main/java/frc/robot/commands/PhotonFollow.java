@@ -40,16 +40,18 @@ public class PhotonFollow extends CommandBase {
             */
             yaw = target.getYaw();
         }
-        double rInput=(yaw-180)/180;
-        double yAxis = 0;
-        double xAxis = 0;
-        double rAxis = rInput;
+        double rInput=(yaw-180)/180; // Normalizing the incoming signal from Yaw to range of [-1, 1]
+        double yAxis = 0;            // Zero for now - robot stays still
+        double xAxis = 0;            // Zero for now - robot stays still
+        double rAxis = rInput; // This is to follow the Cone
         
         /* Deadbands */
         yAxis = (Math.abs(yAxis) < Constants.stickDeadband) ? 0 : yAxis;
         xAxis = (Math.abs(xAxis) < Constants.stickDeadband) ? 0 : xAxis;
         rAxis = (Math.abs(rAxis) < Constants.stickDeadband) ? 0 : rAxis;
 
+        // Robot stays in same location (no translation values) -> Translation
+        // Robot turns based on input from target.getYaw() -> Rotation
         translation = new Translation2d(yAxis, xAxis).times(Constants.Swerve.maxSpeed);
         rotation = rAxis * Constants.Swerve.maxAngularVelocity;
         s_Swerve.drive(translation, rotation, fieldRelative, openLoop);
