@@ -65,8 +65,8 @@ public class RobotContainer {
    */
   public Command getAutonomousCommand() {
     // An ExampleCommand will run in autonomous
-    //return new GamePathExampleMultipleTrajectories(s_Swerve);
-    return new PhotonFollow();
+    return new GamePathExampleMultipleTrajectories(s_Swerve);
+    //return new RNGAuto(s_Swerve);
   }
 
   /**
