@@ -47,7 +47,7 @@ public final class Constants {
         public static final boolean driveEnableCurrentLimit = true;
 
         /* Angle Motor PID Values */
-        public static final double angleKP = 0.2;
+        public static final double angleKP = 0.1;
         public static final double angleKI = 0.0;
         public static final double angleKD = 0.0;
         public static final double angleKF = 0.0;
@@ -126,8 +126,8 @@ public final class Constants {
     }
 
     public static final class AutoConstants {
-        public static final double kMaxSpeedMetersPerSecond = 2; // Original is 3
-        public static final double kMaxAccelerationMetersPerSecondSquared = 1; // Original is 3
+        public static final double kMaxSpeedMetersPerSecond = 3; // Original is 3
+        public static final double kMaxAccelerationMetersPerSecondSquared = 2; // Original is 3
         public static final double kMaxAngularSpeedRadiansPerSecond = Math.PI;
         public static final double kMaxAngularSpeedRadiansPerSecondSquared = Math.PI;
     
